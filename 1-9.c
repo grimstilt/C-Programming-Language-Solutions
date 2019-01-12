@@ -1,22 +1,24 @@
 #include <stdio.h>
 
+#define NO_BLANK	0 /*No blanks encountered yet*/
+#define MUL_BLANK	1 /*One or more blanks encountered*/
 /*Replace each string of one or more blanks by a single blank*/
 
 main()
 {
     int  c, blank;
 
-    blank = 0;
+    blank = NO_BLANK;
     while ((c = getchar()) != EOF){
         if (c == ' '){
-	    if (blank == 0) {
+	    if (blank == NO_BLANK) {
 	        putchar(c);
-	    	blank = 1;
+	    	blank = MUL_BLANK;
 	    }
 	}
-	else if (c != ' ') {
+	if (c != ' ') {
 	    putchar(c);
-	    blank = 0;
+	    blank = NO_BLANK;
 	}
 
     }
