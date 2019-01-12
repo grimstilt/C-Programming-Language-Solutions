@@ -9,8 +9,8 @@ main()
     int  c, blank;
 
     blank = NO_BLANK;
-    while ((c = getchar()) != EOF){
-        if (c == ' '){
+    while ((c = getchar()) != EOF) {
+        if (c == ' ') {
 	    if (blank == NO_BLANK) {
 	        putchar(c);
 	    	blank = MUL_BLANK;
