@@ -2,7 +2,8 @@
 
 main()
 {
-	printf("hello, world\c");
+	printf("hello, world");
 
-	/*("\c	");*/
+	("\c	");
+   "Lets see what happens"
 }
